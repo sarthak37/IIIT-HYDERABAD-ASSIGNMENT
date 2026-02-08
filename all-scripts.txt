@@ -1,0 +1,33 @@
+Scripts:-
+
+ conda --version
+
+ conda tos accept --override-channels --channel https://repo.anaconda.com/pkgs/main
+ conda tos accept --override-channels --channel https://repo.anaconda.com/pkgs/r
+ conda tos accept --override-channels --channel https://repo.anaconda.com/pkgs/msys2
+
+conda create -n mfa -c conda-forge montreal-forced-aligner -y
+
+mfa model list acoustic
+
+mfa validate C:\Users\sarth\OneDrive\Desktop\mfa_project\data english_us_arpa english_us_arpa
+
+mfa align C:\Users\sarth\OneDrive\Desktop\mfa_project\data english_us_arpa english_us_arpa C:\Users\sarth\OneDrive\Desktop\mfa_project\output
+
+mfa validate C:\Users\sarth\OneDrive\Desktop\mfa_project\data english_us_arpa english_us_arpa > validate_before.txt
+
+ C:\Users\sarth>mfa align ^
+More?   C:\Users\sarth\OneDrive\Desktop\mfa_project\data ^
+More?   english_us_arpa ^
+More?   english_us_arpa ^
+More?   C:\Users\sarth\OneDrive\Desktop\mfa_project\output_after_oov ^
+More?   --custom_dictionary C:\Users\sarth\OneDrive\Desktop\mfa_project\oov.dict
+
+>mfa align ^
+More?   C:\Users\sarth\OneDrive\Desktop\mfa_project\data ^
+More?   english_us_arpa ^
+More?   english_us_arpa ^
+More?   C:\Users\sarth\OneDrive\Desktop\mfa_project\output_after_oov ^
+More?   --custom_dictionary C:\Users\sarth\OneDrive\Desktop\mfa_project\oov.dict
+
+
